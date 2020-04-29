@@ -1,0 +1,903 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>辰麒二维码追溯系统，一物一码，智能追溯</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="applicable-device"content="pc,mobile" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+<meta name="keywords" content="辰麒二维码,二维码防伪,二维码溯源,二维码营销,二维码生成,二维码追溯,防伪系统,追溯平台,溯源系统,巡检系统,一码追溯" />
+<meta name="description" content="一码追溯,免费二维码生成,提供二维码防伪溯源_设备巡检_记录管理_防窜货_一物一码标签印刷_网站营销一站式解决方案,致力于帮助企业快速提高品牌形象与管理效率。" />
+<meta property="og:image" content="qrcode/searchimg/logo.jpg" />
+<link rel="canonical" href="https://qrcode.pro">
+<link rel="stylesheet" type="text/css" href="qrcode/cs/style.css" />
+<link rel="stylesheet" type="text/css" href="qrcode/cs/swiper.min.css" />
+<link rel="stylesheet" type="text/css" href="qrcode/cs/font.css" />
+<script type="text/javascript" src="qrcode/js/jquery-3.1.1.min.js"></script>
+<script type="text/javascript" src="qrcode/js/swiper.min.js"></script>
+<script type="application/ld+json">
+	{
+		"@context": "https://ziyuan.baidu.com/contexts/cambrian.jsonld",
+		"@id": "https://qrcode.pro",
+		"appid": "1592101312390986",
+		"title": "一码追溯_二维码防伪追溯巡检管理系统",
+		"images": [
+			"https://qrcode.pro/qrcode/ig/logo-m.png"
+		],
+		"pubDate": "2018-11-21T08:00:01"
+	}
+</script>
+<script type="text/javascript">
+$(function(){
+  var gkspbw=$("#gkspBg_div").css("width");
+  gkspbw=gkspbw.substring(0,gkspbw.length-2);
+  var gkspw=$("#gksp_div").css("width");
+  gkspw=gkspw.substring(0,gkspw.length-2);
+  var gksph=$("#gksp_div").css("height");
+  gksph=gksph.substring(0,gksph.length-2);
+  var closeDiv=$("#gkspBg_div #close_div");
+  closeDiv.css("margin-top","-"+gksph+"px");
+  closeDiv.css("margin-left",(gkspbw-gkspw)/2+parseInt(gkspw)+"px");
+
+  var nav=$("header");
+  var win=$(window);
+  var sc=$(document);
+  win.scroll(function(){
+    if(sc.scrollTop()>=50){
+      nav.addClass("fix");
+    }else{
+    nav.removeClass("fix");
+    }
+  });
+
+  $(".client-list a").mouseover(function(){
+	$(this).find(".img1").css("display","none");
+	$(this).find(".img2").css("display","inline-block");
+  });
+  $(".client-list a").mouseout(function(){
+	$(this).find(".img1").css("display","inline-block");
+	$(this).find(".img2").css("display","none");
+  });
+});
+
+function openModule(){
+	location.href="newcode.html";
+}
+
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?8c80a9e9c16ebc0f53192a4a9c150e97";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+
+/*
+//之前已经有视频标签了，这个方法暂时不用
+function openGkspBgDiv(flag){
+	if(flag==1){
+		alert(flag);
+		$("#gkspBg_div").css("display","block");
+		$(".video-bg").css("display","none");
+		$(".video-box").css("display","none");
+	}
+	else{
+		$("#gkspBg_div").css("display","none");
+	}
+}
+*/
+</script>
+<style>
+/*
+之前已经有视频样式了，这些样式暂时不用
+.gkspBg_div{
+	width:100%;
+	height:100%;
+	background:rgba(77,77,77,0.5);
+	position:fixed;
+	display:none;
+	z-index:1;
+}
+.gksp_div{
+	width:640px;
+	height:360px;
+	margin:235px auto 0;
+}
+.gksp_div video{
+	width:100%;
+	height:100%;
+}
+.gkspBg_div .close_div{
+	width:45px;
+	height:45px;
+	line-height:45px;
+	color:#fff;
+	font-size:40px;
+	text-align:center;
+	background:#00A3FF;
+	cursor:pointer;
+}
+*/
+
+.w-1000 {
+    width: 1000px;
+    margin: 0 auto;
+}
+ul, li, h1, h2, h3, h4, h5, h6, dl, dt, dd, form, input, hr, img, div, label, span, p {
+    margin: 0;
+    padding: 0;
+    word-wrap: break-word;
+    word-break: break-all;
+}
+.col-md-6 {
+    width: 50%;
+}
+.system-tab-content-li h4 {
+    font-size: 17px;
+    color: #2a2a2a;
+    font-weight: 700;
+    line-height: 16px;
+}
+.system-tab-content-li p {
+    font-size: 15px;
+    color: #2a2a2a;
+    margin-top: 16px;
+    line-height: 14px;
+}
+.system-tab-content-li {
+    padding: 40px 0 0;
+    position: relative;
+}
+
+.system-create-code-easy-box .system-tab-content-li.first {
+    padding: 0 !important;
+}
+.system-create-code-easy-box .right-box {
+    margin-top: 8px;
+}
+.system-create-code-easy-box .right-box .left-img {
+    display: inline-block;
+    width: 120px;
+    vertical-align: top;
+}
+.system-create-code-easy-box .right-box .left-img img {
+    width: 100%;
+}
+.system-create-code-easy-box .right-box .right-img {
+    display: inline-block;
+    width: 300px;
+}
+.system-create-code-easy-box .right-box .right-img img {
+    width: 100%;
+}
+.light-new-bg {
+	/*
+    background-color:#f7f9f7;
+	*/
+    background-color:#F9F9F9;
+}
+.system-feature-box {
+    padding: 100px 0 80px;
+}
+.system-feature-box h3 {
+    font-size: 26px;
+    line-height: 24px;
+	/*
+    font-weight: 700;
+	*/
+    text-align: center;
+}
+.system-feature-box .system-tab-content {
+    margin-top: 56px;
+	height:430px;
+}
+.system-beautiful-new-box .system-tab-content-li img, .system-anytime-new-box .system-tab-content-li img {
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    z-index: 1;
+}
+.system-beautiful-new-box .system-tab-content-li .dashed-line, .system-anytime-new-box .system-tab-content-li .dashed-line {
+    border-left: 1px dashed #ddd;
+    height: 100%;
+    position: absolute;
+    left: 9px;
+    top: 50px;
+}
+.system-beautiful-new-box .system-tab-content-li .content-info, .system-anytime-new-box .system-tab-content-li .content-info {
+    margin-left: 36px;
+}
+.system-beautiful-new-box .system-tab-content-li.first, .system-anytime-new-box .system-tab-content-li.first {
+    padding-top: 48px;
+}
+.system-tab-content-li.first {
+    margin-top: 10px;
+}
+.system-tab-content-li .content-info h4 {
+    padding-top: 2px;
+}
+.system-anytime-new-box .system-tab-content-li .content-info p, .system-beautiful-new-box .system-tab-content-li .content-info p {
+    line-height: 21px;
+}
+.action-box2{
+	width:318px;
+	height:48px;
+	margin:0 auto;
+	margin-top:55px;
+}
+.symbcj_div,.ljpbdy_div,.glwdewm_div,.ckwdewm_div,.mfsy_div{
+	width:148px;
+	height:48px;
+	line-height:48px;
+	color:#fff;
+	text-align:center;
+	font-size:16px;
+	background-color:#00A3FF;
+	border-radius:5px;
+	cursor:pointer;
+}
+.zdycj_div,.mhewm_div,.mfcj_div,.ckjg_div{
+	width:148px;
+	height:44px;
+	line-height:48px;
+	margin-top:-48px;
+	margin-left:170px;
+	color:#00A3FF;
+	text-align:center;
+	font-size:16px;
+	border:#00A3FF solid 2px;
+	background-color:#fff;
+	border-radius:5px;
+	cursor:pointer;
+}
+
+.text-center {
+    text-align: center;
+}
+.text-darkgrey-new {
+    color: #2a2a2a !important;
+}
+.system-features-new-box {
+    padding: 60px 0 0 0;
+    color: #000;
+}
+.system-features-title {
+    font-size: 25px;
+    line-height: 24px;
+    font-weight: 700;
+}
+.system-features-desc {
+    font-size: 14px;
+    line-height: 14px;
+    margin-top: 16px;
+}
+.system-features-content-box {
+	height:260px;
+    margin-top: 66px;
+}
+.col-md-3 {
+    width: 25%;
+}
+.col-md-1, .col-md-10, .col-md-11, .col-md-12, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9 {
+    float: left;
+}
+.case .title {
+    margin: 0 0 50px;
+    font-size: 25px;
+}
+.advantage {
+    width: 220px;
+    padding: 40px 0 27px;
+	/*
+    min-height: 260px;
+	*/
+    box-shadow: 0 6px 10px rgba(0,0,0,.15);
+	border-radius: 10px;
+	background:#fff;
+    margin: 0 auto;
+    text-align: center;
+}
+.advantage h3 {
+    font-size: 18px;
+    margin-bottom: 24px;
+    color: #4A4A4A;
+}
+.advantage p {
+    font-size: 14px;
+    color: #4A4A4A;
+}
+.h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
+    font-weight: 500;
+}
+.icon-feature-safety {
+    width: 48px;
+    height: 48px;
+    background-repeat: no-repeat;
+    margin: 0 auto 24px;
+    background-image: url(static/images/products/product-safe@2x_9176836.png);
+    background-size: cover;
+}
+.icon-feature-scene.wending {
+    background-position: 0 1px;
+}
+.icon-feature-scene {
+    width: 48px;
+    height: 48px;
+    background-repeat: no-repeat;
+    background-image: url(static/images/products/icon-feature-scene_23ad74b.png);
+    background-size: 200% 200%;
+    margin: 0 auto 24px;
+}
+.icon-feature-jingji {
+    width: 48px;
+    height: 48px;
+    background-repeat: no-repeat;
+    margin: 0 auto 24px;
+    background-image: url(static/images/products/product-trophy@2x_cdad54d.png);
+    background-size: contain;
+}
+.client-list li {
+    width: 25%;
+    height: 82px;
+    float: left;
+    position: relative;
+}
+.client-list .li1 {
+    width: 25%;
+    height: 82px;
+    float: left;
+    margin-top: 10px;
+    position: relative;
+}
+.client-list li .img1{
+	display: inline-block;
+}
+.client-list li .img2{
+	display: none;
+}
+.lfyl_img{
+	width:224px;
+	height:58px;
+	margin-left:-38px;
+}
+.lprhy_img{
+	width:224px;
+	height:56px;
+}
+.lwzy_img{
+	width:224px;
+	height:59px;
+}
+.slyt_img{
+	width:224px;
+	height:47px;
+	margin-top:5px;
+	margin-left: 49px;
+}
+.dthlj_img{
+	width:224px;
+	height:42px;
+}
+.dyhkjc_img{
+	width:224px;
+	height:36px;
+}
+.hnycxny_img{
+	width:224px;
+	height:30px;
+	margin-top: 3px;
+}
+.hm_img{
+	width:224px;
+	height:26px;
+	margin-top: 4px;
+}
+.jnkyjt_img{
+	width:224px;
+	height:39px;
+	margin-left:-27px;
+}
+.wrhxcl_img{
+	width:224px;
+	height:39px;
+}
+.mzgj_img{
+	width:224px;
+	height:39px;
+}
+.htkg_img{
+	width:224px;
+	height:28px;
+	margin-top:6px;
+}
+.footer-to-price-new {
+	/*
+    background-color: #F7F9F7;
+	*/
+    padding: 80px 0;
+}
+.footer-to-price-new .use-cliao-user-title {
+    color: #333;
+    font-weight: 400;
+    font-size: 28px;
+}
+.case {
+    padding: 70px 0 20px 0;
+    text-align: center;
+    background: #f9f9f9;
+}
+.case .just img{
+	width:230px;
+	height:230px;
+}
+
+.w_grid_div{
+	width:100%;
+	height:auto;
+	background-color:#1F232A;
+}
+.info-tell{
+	width:950px;
+	padding-top: 25px;
+	height: auto;
+	margin:0 auto;
+	margin-bottom: 40px;
+}
+.info-tell p{
+	font-size: 15px;
+	color:#FFFFFF;
+	letter-spacing: 0;
+	line-height: 45px;
+}
+.bqxx{
+	width:1440px;
+	height:52px;
+	line-height:52px;
+	border-top: 1px solid rgba(255,255,255,0.5);
+	margin:0 auto;
+	text-align: center;
+	font-size: 14px;
+	color: #999999;
+	letter-spacing: 0;
+}
+</style>
+</head>
+<body>
+<header>
+<!--
+之前已经有视频标签了，这些标签暂时不用
+<div class="gkspBg_div" id="gkspBg_div">
+	<div class="gksp_div" id="gksp_div">
+		<video controls="controls"/>
+			<source src="qlqrcode_files/embed/202004280001.mp4" type="video/mp4"></source>
+		</video>
+	</div>
+	<div class="close_div" id="close_div" onclick="openGkspBgDiv(0)">X</div>
+</div>
+-->
+<div class="nav">
+    <a href="/" class="logo fl">&nbsp;</a>
+    <div class="navbar">
+        <ul class="menu">
+            <li class="active">
+				<a href="index.html">首页</a>
+			</li>
+            <li>
+				<a href="solutionCommodity.html">案例模板</a>
+			</li>
+			<li>
+				<a href="qrcodeCreate/text.html">二维码生成器</a>
+			</li>
+            <li class="list">
+				<a href="price.html">定制价格</a>
+            </li>
+			<li class="list">
+				<a href="help.html">帮助</a>
+			</li>
+        </ul>
+		<div class="nav_button">
+			<a href="http://www.qrcodesy.com:8080/GoodsPublic/merchant/login" target="_blank" class="login but">登录</a>
+			<!--
+			<a class="kf-open registered but"><span>申请试用</span></a>
+			-->
+		</div>
+    </div>
+</div>
+</header>
+<nav class="topnav">
+    <div class="topnav-layer">
+        <div class="topnav-menu">
+            <div class="topnav-menu-col" id="topnavToggle">
+                <div class="topnav-rotate-top"><span></span></div>
+                <div class="topnav-rotate-middle"><span></span></div>
+                <div class="topnav-rotate-bottom"><span></span></div>
+            </div>
+        </div>
+        <div class="topnav-logo"><a href="/"></a></div>
+        <div class="topnav-reg"><a href="/login">登录</a></div>
+    </div>
+    <div class="menu-list">
+        <ul>
+            <li><a href="/">首页</a></li>
+            <li><a href="/qrcode/function">功能</a></li>
+            <li>
+                <a href="/qrcode/solution">解决方案</a>
+                <p><a href="/qrcode/solution">一站式</a></p>
+                <p><a href="/qrcode/solution/traceback.html">防伪追溯</a></p>
+                <p><a href="/qrcode/solution/inspect.html">设备巡检</a></p>
+                <p><a href="/qrcode/solution/record.html">周期记录</a></p>
+            </li>
+            <li>
+				<a href="/qrcode/case">案例展示</a>
+				<p><a href="https://qrcode.pro/q/?c=16666661150000000129000008000004">农药追溯</a></p>
+				<p><a href="https://qrcode.pro/q/?c=00000128000009000000">种子追溯</a></p>
+				<p><a href="https://qrcode.pro/q/?c=00000003000041000000">化肥追溯</a></p>
+				<p><a href="/qrcode/case">更多案例</a></p>
+			</li>
+            <li>
+				<a href="/help/faq/information/">资讯帮助</a>
+				<p><a href="/help/faq/problem/">常识问答</a></p>
+				<p><a href="/help/faq/information/">行业资讯</a></p>
+				<p><a href="/help/faq/help/">帮助文档</a></p>
+				<p><a href="/qrcode/about/">关于我们</a></p>
+			</li>
+			<li><a href="/tools/qrcode/">二维码生成器</a></li>
+        </ul>
+    </div>
+</nav>
+<div class="banner min_w">
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide" style="background:url(qrcode/ig/lunbo1.jpg)">
+                <a href="/help/faq/manure/86.php">「肥料二维码可追溯标签，实现肥料扫码验真伪」</a>
+            </div>
+            <div class="swiper-slide" style="background:url(qrcode/ig/lunbo2.jpg)">
+                <a href="/help/faq/knowledge/48.php">「如何实现一物一码标签打印，一物一码标签如何制作？」</a>
+            </div>
+            <div class="swiper-slide" style="background:url(qrcode/ig/lunbo3.png)">
+                <a href="/help/faq/fruit/151.php">「水果一物一码可追溯标签如何制作？」</a>
+            </div>
+        </div>
+        <div class="swiper-pagination"></div>
+    </div>
+	<div class="big_size" style="width:100%;margin-top:285px;position:absolute;">
+		<div class="al">
+			<a href="newcode.html">点击试用</a>
+			<a class="watch but btn-video" onclick="openGkspBgDiv(1)"><i class="playicon"></i>观看视频</a>
+		</div>
+	</div>
+</div>
+<div class="video-bg"></div>
+<div class="video-box">
+    <div class="video_lr">
+        <video controls preload="none"  x5-playsinline="" playsinline="" webkit-playsinline="">
+			<source src="qlqrcode_files/embed/202004280001.mp4"></source>
+        </video>
+        <div class="video-close"></div>
+    </div>
+</div>
+<script type="text/javascript">
+var swiper = new Swiper('.swiper-container', {
+	effect: 'fade',
+	autoplay: {
+		delay: 8000,
+		disableOnInteraction: false,
+	},
+	pagination: {
+		el: '.swiper-pagination',
+		clickable: true,
+	},
+});
+//news
+var swiper = new Swiper('.merchants', {
+	  loop : true,
+      navigation: {
+        nextEl: '.merchants-next',
+        prevEl: '.merchants-prev',
+      },
+    });
+</script>
+<div class="collaboration min_w">
+    <div class="title">丰富场景应用 满足多样化需求</div>
+    <ul>
+        <li><i class="chanpin" onclick="openModule()"></i><p>产品展示</p></li>
+        <li><i class="fangwei" onclick="openModule()"></i><p>防伪追溯</p></li>
+        <li><i class="fenlei" onclick="openModule()"></i><p>分类管理</p></li>
+        <li><i class="weijian" onclick="openModule()"></i><p>设备维检</p></li>
+        <li><i class="daili" onclick="openModule()"></i><p>代理管理</p></li>
+        <li><i class="shuju" onclick="openModule()"></i><p>数据分析</p></li>
+        <li><i class="quanxian" onclick="openModule()"></i><p>权限管理</p></li>
+        <li><i class="yingxiao" onclick="openModule()"></i><p>营销推广</p></li>
+    </ul>
+    <a class="more but" href="solutionCommodity.html">查看更多功能介绍</a>
+</div>
+
+<section id="system-create-code-easy-box" class="system-feature-box system-create-code-easy-box light-new-bg">
+	<div class="w-1000">
+		<h3 class="text-darkgrey-new">一站式模块化整体解决方案&nbsp;满足您的一切需求</h3>
+		<div class="system-tab-content row">
+			<div class="col-md-6 left-box" style="width: 50%;float: left;">
+				<ul class="system-tab-content-ul">
+					<li class="system-tab-content-li first">
+						<h4>免费创建</h4>
+						<p>各类二维码均能免费生成，生成的二维码长期有效</p>
+					</li>
+					<li class="system-tab-content-li">
+						<h4>丰富组件</h4>
+						<p>图片、文字、音视频、文件、网址、表单、联系方式等十几种组件</p>
+					</li>
+					<li class="system-tab-content-li">
+						<h4>表单功能</h4>
+						<p>轻松实现签到、报名等信息收集，低成本满足巡查等管理场景</p>
+					</li>
+					<li class="system-tab-content-li">
+						<h4>批量生成</h4>
+						<p>让你简单高效生成大量同类二维码，减少重复工作</p>
+					</li>
+					<li class="system-tab-content-li">
+						<h4>行业模版</h4>
+						<p>常见行业模板免费套用，只需3步即可生成属于自己的二维码</p>
+					</li>
+				</ul>
+			</div>
+			<div class="col-md-6 right-box" style="width: 425px;float: right;">
+				<div class="left-img">
+					<img src="static/images/products/create-easy-code-left@2x_5446a29.png" alt="">
+				</div>
+				<div class="right-img">
+					<img src="static/images/products/create-easy-code-right-top@2x_c8ad3fd.png" alt="" style="margin-top: 40px;">
+					<img src="static/images/products/create-easy-code-right-bottom@2x_2ad4f5b.png" alt="" style="margin-top: 24px;">
+				</div>
+			</div>
+		</div>
+		<div class="action-box2">
+			<div class="symbcj_div" onclick="location.href='newcode.html'">使用模板创建</div>
+			<div class="zdycj_div" onclick="alert('这个模板有待添加')">自定义创建</div>
+		</div>
+	</div>
+</section>
+
+<section class="system-feature-box">
+	<div class="w-1000">
+		<h3 class="text-darkgrey-new">强大的管理后台，更灵活地使用二维码</h3>
+		<div class="system-tab-content row">
+			<div class="col-md-6 left-box" style="width: 50%;float: left;">
+				<ul class="system-tab-content-ul">
+					<li class="system-tab-content-li first">
+						<h4>二维码图案不变</h4>
+						<p>已生成的二维码修改内容，扫码同步更新，避免内容修改重复打印，节约印刷成本</p>
+					</li>
+					<li class="system-tab-content-li">
+						<h4>二维码设置</h4>
+						<p>提供有效期、指定扫码人员、扫码打开方式等设置，让你的二维码内容更安全 </p>
+					</li>
+					<li class="system-tab-content-li">
+						<h4>后台管理</h4>
+						<p>登录辰麒，即可对已生成的二维码可进行查看、再次修改、删除、统计等统一管理</p>
+					</li>
+				</ul>
+			</div>
+			<div class="col-md-6 right-box" style="width: 455px;float: left;margin-left: 36px;">
+				<img src="static/images/products/product-control@2x_9ea8875.png" alt="" style="width: 100%;">
+			</div>
+		</div>
+		<div class="action-box2">
+			<div class="glwdewm_div" onclick="location.href='http://www.qrcodesy.com:8080/GoodsPublic/merchant/login'">管理我的二维码</div>
+			<div class="mfcj_div" onclick="location.href='newcode.html'">免费创建</div>
+		</div>
+	</div>
+</section>
+
+<div class="case min_w">
+    <div class="title">案例在线体验</div>
+    <ul class="w1200">
+        <li>
+            <div class="spin">
+                <div class="just"><p><img src="qrcode/ig/case/qrmp.png" alt="积分兑换奖品"></p><span class="span">积分兑换奖品</span></div>
+                <div class="instead"><div class="img"><img src="http://www.qrcodesy.com:8080/GoodsPublic/upload/jfdhjp/20200425173001.jpg"></div><span class="span">扫码体验</span></div>
+            </div>
+        </li>
+        <li>
+            <div class="spin">
+                <div class="just"><p><img src="qrcode/ig/case/qrny.png" alt="红酒"></p><span class="span">红酒</span></div>
+                <div class="instead"><div class="img"><img src="qrcode/ig/case/202003090001.png"></div><span class="span">扫码体验</span></div>
+            </div>
+        </li>
+        <li>
+            <div class="spin">
+                <div class="just"><p><img src="qrcode/ig/case/qrsp.png" alt="白酒"></p><span class="span">白酒</span></div>
+                <div class="instead"><div class="img"><img src="http://www.qrcodesy.com:8080/GoodsPublic/upload/20200425173115.jpg"></div><span class="span">扫码体验</span></div>
+            </div>
+        </li>
+        <li>
+            <div class="spin">
+                <div class="just"><p><img src="qrcode/ig/case/qrxj.png" alt="家纺"></p><span class="span">家纺</span></div>
+                <div class="instead"><div class="img"><img src="http://www.qrcodesy.com:8080/GoodsPublic/upload/20200418160121.jpg"></div><span class="span">扫码体验</span></div>
+            </div>
+        </li>
+        <li>
+            <div class="spin">
+                <div class="just"><p><img src="qrcode/ig/case/qrlc.png" alt="艺术品"></p><span class="span">艺术品</span></div>
+                <div class="instead"><div class="img"><img src="http://www.qrcodesy.com:8080/GoodsPublic/upload/20200418161220.jpg"></div><span class="span">扫码体验</span></div>
+            </div>
+        </li>
+        <li>
+            <div class="spin">
+                <div class="just"><p><img src="qrcode/ig/case/qrxx.png" alt="说明书"></p><span class="span">说明书</span></div>
+                <div class="instead"><div class="img"><img src="http://www.qrcodesy.com:8080/GoodsPublic/upload/20200330155851.jpg"></div><span class="span">扫码体验</span></div>
+            </div>
+        </li>
+        <li>
+            <div class="spin">
+                <div class="just"><p><img src="qrcode/ig/case/qrsc.jpg" alt="多媒体资料"></p><span class="span">多媒体资料</span></div>
+                <div class="instead"><div class="img"><img src="qrcode/ig/case/202003090002.png"></div><span class="span">扫码体验</span></div>
+            </div>
+        </li>
+        <li>
+            <div class="spin">
+                <div class="just"><p><img src="qrcode/ig/case/qrhz.png" alt="建筑施工"></p><span class="span">建筑施工</span></div>
+                <div class="instead"><div class="img"><img src="qrcode/ig/case/202003090003.png"></div><span class="span">扫码体验</span></div>
+            </div>
+        </li>
+    </ul>
+	<p style="height:50px;font-size: 18px;text-align:center;margin-top:25px;">欢迎与我们沟通： 0532-55588351&nbsp;&nbsp;&nbsp;15712773653</p>
+</div>
+
+<section id="system-features-new-box" class="white system-features-new-box">
+	<div class="w-1000 features">
+		<h3 class="system-features-title text-center text-darkgrey-new">全面保障你的应用体验</h3>
+		<p class="text-center system-features-desc text-center text-darkgrey-new">懂你的疑虑，辰麒专业的技术与服务，解决你的后顾之忧</p>
+		<div class="row system-features-content-box">
+			<div class="col-md-3">
+				<div class="advantage">
+					<div class="icon-feature-safety"></div>
+					<h3>持续安全运营</h3>
+					<p>2011年成立至今<br>帮助数百万企业、机构<br>实现二维码应用</p>
+				</div>
+			</div>
+			<div class="col-md-3">
+				<div class="advantage">
+					<div class="icon-feature-scene wending"></div>
+					<h3>系统稳定可靠</h3>
+					<p>基于阿里云架构服务<br>专业云服务支持<br>安全稳定有保障</p>
+				</div>
+			</div>
+			<div class="col-md-3">
+				<div class="advantage">
+					<div class="icon-feature-jingji"></div>
+					<h3>行业标准制定</h3>
+					<p>参与《商品二维码》<br>《名片二维码通用技术规范》<br>等国家标准起草并制定</p>
+				</div>
+			</div>
+			<div class="col-md-3">
+				<div class="advantage">
+					<div class="icon-feature-scene easy"></div>
+					<h3>专业服务团队</h3>
+					<p>5×8小时在线售前咨询<br>1对1售后顾问<br>问题及时响应</p>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+
+	<div class="w-p100" style="height:290px;padding: 72px 0px;">
+		<div class="w-1000 p-b-md text-center contact-wrapper logo-demo-v3">
+			<h2 class="scene-title" style="font-size: 25px;margin-bottom: 44px;font-weight: bold;">超过百万用户都在使用辰麒二维码</h2>
+			<div style="width:1000px;">
+			   <ul class="client-list">
+				  <li class="fl">
+					<em style="display:none">合作客户</em>
+					<a href="javascript:;">
+					  <img class="img1 lfyl_img" src="qlqrcode_files/images/b1ae4b03-1d4d-4258-88fd-f2594ace25ed.png" alt="">
+					  <img class="img2 lfyl_img" src="qlqrcode_files/images/92c4e81f-f013-4f1f-9c2a-82a9e55ffb3c.png" alt="">
+					</a>
+				  </li>
+				  <li class="fl">
+					<em style="display:none">合作客户</em>
+					<a href="javascript:;">
+					  <img class="img1 lprhy_img" src="qlqrcode_files/images/zS_YRPEER4eVSoqJYmxE_A.png" alt="">
+					  <img class="img2 lprhy_img" src="qlqrcode_files/images/u7xv9kwXS5-HRoOC4_56NA.png" alt="">
+					</a>
+				  </li>
+				  <li class="fl">
+					<em style="display:none">合作客户</em>
+					<a href="javascript:;">
+					  <img class="img1 lwzy_img" src="qlqrcode_files/images/3BcLkB7BTUmHuD1fWIY3Ug.png" alt="">
+					  <img class="img2 lwzy_img" src="qlqrcode_files/images/gpWPsehgQmarb9Gtn_j07g.png" alt="">
+					</a>
+				  </li>
+				  <li class="fl">
+					<em style="display:none">合作客户</em>
+					<a href="javascript:;">
+					  <img class="img1 slyt_img" src="qlqrcode_files/images/shengliyoutian1.jpg" alt="">
+					  <img class="img2 slyt_img" src="qlqrcode_files/images/shengliyoutian.jpg" alt="">
+					</a>
+				  </li>
+				  <li class="li1">
+					<em style="display:none">合作客户</em>
+					<a href="javascript:;">
+					  <img class="img1 dthlj_img" src="qlqrcode_files/images/IVTJYC15S_miYffXdFwHBA.png" alt="">
+					  <img class="img2 dthlj_img" src="qlqrcode_files/images/V8sO46IrR0u9Ab7zKya2dA.png" alt="">
+					</a>
+				  </li>
+				  <li class="li1">
+					<em style="display:none">合作客户</em>
+					<a href="javascript:;">
+					  <img class="img1 dyhkjc_img" src="qlqrcode_files/images/OEAY-g19T4aXVfjcoRpVUw.png" alt="">
+					  <img class="img2 dyhkjc_img" src="qlqrcode_files/images/OylI7ylqRCeSohg2uB6n6w.png" alt="">
+					</a>
+				  </li>
+				  <li class="li1">
+					<em style="display:none">合作客户</em>
+					<a href="javascript:;">
+					  <img class="img1 hnycxny_img" src="qlqrcode_files/images/OP_bG_UqQVOX656W-W2usQ.png" alt="">
+					  <img class="img2 hnycxny_img" src="qlqrcode_files/images/2yc9iRliS06gcVWxF8VE6Q.png" alt="">
+					</a>
+				  </li>
+				  <li class="li1">
+					<em style="display:none">合作客户</em>
+					<a href="javascript:;">
+					  <img class="img1 hm_img" src="qlqrcode_files/images/FKMs6dSxT5uuM37-7YezMw.png" alt="">
+					  <img class="img2 hm_img" src="qlqrcode_files/images/PJDKykTbQkyXB9III0_ieA.png" alt="">
+					</a>
+				  </li>
+				  <li class="fl">
+					<em style="display:none">合作客户</em>
+					<a href="javascript:;">
+					  <img class="img1 jnkyjt_img" src="qlqrcode_files/images/o8cYLHcfSSCP1dopxIC-8g.png" alt="">
+					  <img class="img2 jnkyjt_img" src="qlqrcode_files/images/2y_b-H4TT8GntPvP2NyDSw.png" alt="">
+					</a>
+				  </li>
+				  <li class="fl">
+					<em style="display:none">合作客户</em>
+					<a href="javascript:;">
+					  <img class="img1 wrhxcl_img" src="qlqrcode_files/images/4VrLJMisTU2xBRJmqwDBng.png" alt="">
+					  <img class="img2 wrhxcl_img" src="qlqrcode_files/images/8lt6xTBLTQi6Bl1P672tjQ.png" alt="">
+					</a>
+				  </li>
+				  <li class="fl">
+					<em style="display:none">合作客户</em>
+					<a href="javascript:;">
+					  <img class="img1 mzgj_img" src="qlqrcode_files/images/fLoo-f5cQwydvhq6U7XjNw.png" alt="">
+					  <img class="img2 mzgj_img" src="qlqrcode_files/images/cjyMvvCIQvePbgd3n_BrNw.png" alt="">
+					</a>
+				  </li>
+				  <li class="fl">
+					<em style="display:none">合作客户</em>
+					<a href="javascript:;">
+					  <img class="img1 htkg_img" src="qlqrcode_files/images/sanjianghangtian1.jpg" alt="">
+					  <img class="img2 htkg_img" src="qlqrcode_files/images/sanjianghangtian.jpg" alt="">
+					</a>
+				  </li>
+			   </ul>				
+			</div>
+		</div>
+	</div>
+
+<div class="w-p100 footer-to-price-new light-new-bg">
+	<div class="row text-center use-cliao-user-box">
+		<h3 class="use-cliao-user-title">免费即可使用，付费获取更高功能及专享服务</h3>
+		<div class="action-box2">
+			<div class="mfsy_div" onclick="location.href='newcode.html'">免费使用</div>
+			<div class="ckjg_div" onclick="location.href='price.html'">查看价格</div>
+		</div>
+	</div>
+</div>
+
+<!--w_grid-1568271949559_start-->
+<div id="w_grid-1568271949559" class="w_grid_div">
+	<div class="info-tell">
+		<p>资讯热线：0532-55588351&nbsp;&nbsp;15712773653（微信同号）</p>
+		<p>邮箱地址：qdhualing@126.com</p>
+		<p>自动化控制系统集成网址：www.qdhualing.com</p>
+	</div>
+	<div class="bqxx">
+		青岛华凌科技有限公司 qdhualing.com <a href="http://www.beian.miit.gov.cn" style="color:#999;">鲁ICP备19062226号-3</a>
+	</div>
+</div>
+<!--w_grid-1568271949559_end-->
+<script type="text/javascript" src="qrcode/js/index.js"></script>
+<script type="text/javascript" src="qrcode/js/share.js"></script>
+</body>
+</html>

@@ -1,0 +1,296 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="Generator" content="EditPlus®">
+<meta name="Author" content="">
+<meta name="Keywords" content="辰麒二维码,二维码防伪,二维码溯源,二维码营销,二维码生成,二维码追溯,防伪系统,追溯平台,溯源系统,巡检系统,一码追溯">
+<meta name="Description" content="一码追溯,免费二维码生成,提供二维码防伪溯源_设备巡检_记录管理_防窜货_一物一码标签印刷_网站营销一站式解决方案,致力于帮助企业快速提高品牌形象与管理效率。">
+<link rel="stylesheet" type="text/css" href="../qrcode/cs/style.css" />
+<script type="text/javascript" src="../qrcode/js/jquery-3.1.1.min.js"></script>
+<script>
+function createQrcode(){
+	var content=$("#content_ta").val();
+	$.ajax({
+		url:"http://www.qrcodesy.com:8080/GoodsPublic/merchant/chenQi/createQrcodeByCQSCQ",
+		data:{url:content},
+		dataType:"jsonp",
+		type: "post",
+		jsonpCallback:"jsonpCallback",
+		success:function(data){
+			var qrcode=JSON.parse(data).qrcode;
+			$("#showQrcode_div").empty();
+			$("#showQrcode_div").append("<img src=\"http://www.qrcodesy.com:8080"+qrcode+"\" style=\"width:100%;height:100%;\"/>");
+
+			$("#content_ta").css("display","none");
+			$("#rwmysc_div").css("display","block");
+			$("#showContent_div").css("display","block");
+			$("#showContent_div").text(content);
+			$("#createQrcode_div").css("display","none");
+			$("#newOne_div").css("display","block");
+		}
+	});
+}
+
+function newOneQrcode(){
+	$("#content_ta").css("display","block");
+	$("#rwmysc_div").css("display","none");
+	$("#showContent_div").css("display","none");
+	$("#showContent_div").text("");
+	$("#createQrcode_div").css("display","block");
+	$("#newOne_div").css("display","none");
+	$("#showQrcode_div").text("此处生成二维码");
+}
+
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?8c80a9e9c16ebc0f53192a4a9c150e97";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+<style>
+.title {
+    padding-top: 130px;
+    padding-bottom: 40px;
+    font-size: 30px;
+    color: #555;
+    text-align: center;
+}
+.cli_nav {
+    width: 100%;
+	/*
+    background: #EDF1EA;
+	*/
+}
+.p-a-0 {
+    padding: 0 !important;
+}
+.cli_nav .sub_nav {
+    width: 1000px;
+    height: 58px;
+    margin: 0 auto;
+    position: relative;
+}
+.cli_nav .sub_nav li {
+    float: left;
+    height: 100%;
+    list-style: none;
+	/*
+    padding: 12px 0 8px;
+	*/
+}
+.cli_nav .sub_nav li a.on {
+    color: #4caf50;
+}
+.cli_nav .sub_nav .on {
+    position: relative;
+	/*
+    font-weight: bold;
+	*/
+}
+.cli_nav .sub_nav .on::after {
+    content: ' ';
+    position: absolute;
+    left: 0;
+    bottom: -14px;
+    width: 100%;
+    height: 2px;
+    background-color: #4caf50;
+}
+.cli_nav .sub_nav li a {
+    position: relative;
+    display: inline-block;
+    font-size: 23px;
+    padding: 0px 14px;
+    margin-right: 20px;
+    text-align: center;
+    z-index: 1;
+}
+.cli_nav .sub_nav li a svg {
+    vertical-align: middle;
+    width: 14px;
+    height: 14px;
+    position: relative;
+    top: -1px;
+}
+
+.contentTa_div{
+	width:100%;height:260px;background-color:#fff;
+}
+.content_ta{
+	width:100%;height:212px;padding:24px;font-size: 16px;border: 1px solid #d4d0c8;border-radius: 3px;
+}
+.rwmysc_div{
+	width:100%;
+	height: 30px;
+	line-height: 30px;
+	color:#4A4A4A;
+	text-align:center;
+	display:none;
+}
+.showContent_div{
+	width:100%;
+	height:156px;
+	line-height:156px;
+	text-align:center;
+	font-size: 20px;
+	border: rgba(120,130,140,.25) solid 1px;
+	color:#000;
+	background-color:#fff;
+	display:none;
+}
+.createQrcode_div,.newOne_div{
+	width:148px;
+	height:48px;
+	line-height:48px;
+	color:#fff;
+	text-align:center;
+	font-size:15px;
+	margin:0 auto;
+	margin-top:25px;
+	background-color:#00A3FF;
+	cursor:pointer;
+	border-radius:5px;
+}
+.showQrcode_div{
+	width:260px;
+	height:260px;
+	line-height:260px;
+	text-align:center;
+	color:#bbb;
+	font-size: 16px;
+	background-color:#fff;
+	border: 1px solid #d4d0c8;
+	float:right;
+}
+.mark .text {
+    float: left;
+    width: 100%;
+}
+
+.w_grid_div{
+	width:100%;
+	height:auto;
+	background-color:#1F232A;
+}
+.info-tell{
+	width:1202px;
+	padding-top: 25px;
+	height: auto;
+	margin:0 auto;
+	margin-bottom: 40px;
+}
+.info-tell p{
+	font-size: 15px;
+	color:#FFFFFF;
+	letter-spacing: 0;
+	line-height: 45px;
+}
+.bqxx{
+	width:1440px;
+	height:52px;
+	line-height:52px;
+	border-top: 1px solid rgba(255,255,255,0.5);
+	margin:0 auto;
+	text-align: center;
+	font-size: 14px;
+	color: #999999;
+	letter-spacing: 0;
+}
+</style>
+<title>辰麒二维码追溯系统，一物一码，智能追溯</title>
+</head>
+<body>
+<header class="fix">
+    <div class="nav">
+        <a href="/" class="logo fl">&nbsp;</a>
+        <div class="navbar">
+            <ul class="menu">
+                <li>
+					<a href="../index.html">首页</a>
+				</li>
+                <li>
+					<a href="../solutionCommodity.html">案例模板</a>
+				</li>
+				<li class="active">
+					<a href="text.html">二维码生成器</a>
+				</li>
+				<li>
+					<a href="../price.html">定制价格</a>
+				</li>
+				<li>
+					<a href="../help.html">帮助</a>
+				</li>
+            </ul>
+			<div class="nav_button">
+				<a href="http://www.qrcodesy.com:8080/GoodsPublic/merchant/login" target="_blank" class="login but">登录</a>
+				<!--
+				<a class="kf-open registered but"><span>申请试用</span></a>
+				-->
+			</div>
+        </div>
+    </div>
+</header>
+<div class="title">免费二维码在线生成器</div>
+<div class="cli_nav nav_gray scene_mobile clearfix p-a-0">
+	<ul class="sub_nav sub_mobile_nav cli_head_container clearfix">
+		<li>
+			<a href="text.html" title="生成文本二维码" class="tab_sep on">文本</a>
+		</li>
+		<li>
+			<a href="url.html" title="生成网址二维码" class="tab_sep [navigation_url]" onclick="StatisticsData(120,12)">网址</a>
+		</li>
+		<li>
+			<a href="vcard.html" title="名片二维码" class="tab_sep [navigation_vcard]" onclick="StatisticsData(120,16)">名片</a>
+		</li>
+	</ul>
+</div>
+
+<div style="width:1903px;height:374px;">
+	<div style="width:1000px;height:314px;margin:auto;">
+		<div style="width:605px;height:273px;float:left;">
+			<div class="contentTa_div" id="contentTa_div">
+				<textarea class="content_ta" id="content_ta" placeholder="请输入文字内容"></textarea>
+				<div class="rwmysc_div" id="rwmysc_div">二维码已生成</div>
+				<div class="showContent_div" id="showContent_div"></div>
+			</div>
+			<div class="createQrcode_div" id="createQrcode_div" onclick="createQrcode()">使用模板创建</div>
+			<div class="newOne_div" id="newOne_div" onclick="newOneQrcode()" style="display:none;">再建一个</div>
+		</div>
+		<div class="showQrcode_div" id="showQrcode_div">此处生成二维码</div>
+	</div>
+</div>
+
+<div class="city_why">
+	<div class="city_why_box">			
+		<div class="imgbox"><img src="../qrcode/ig/tools-1.jpg" alt="什么是二维码追溯？"></div>
+		<div class="textbox">
+			<h2>什么是二维码追溯？</h2>
+			<p>
+			二维码追溯就是消费者购买带有追溯码的产品后通过手机扫描产品包装上的二维码，对所购买产品的原料来源、加工过程、生产周期、流通信息、质量检测、产地信息、厂家信息等进行品质追溯、溯源追查的过程。
+			</p>
+			<div class="mark">
+				<div class="text"><strong>一物一码 品质追溯</strong> <br>一码追溯二维码追溯系统，让每一件商品都具有独立的“身份证”，实现了品牌产品质量全程可追溯。</div>
+			</div>	
+			<a target="_blank" href="../newcode.html" class="button1">点击试用</a>
+			<a target="_black" href="http://wpa.qq.com/msgrd?v=3&uin=1578569337&site=qq&menu=yes" class="button2 chatqq">在线咨询</a>
+		</div>			
+	</div>
+</div>
+
+<!--w_grid-1568271949559_start-->
+<div id="w_grid-1568271949559" class="w_grid_div">
+	<div class="info-tell">
+		<p>资讯热线：0532-55588351&nbsp;&nbsp;15712773653（微信同号）</p>
+		<p>邮箱地址：qdhualing@126.com</p>
+		<p>自动化控制系统集成网址：www.qdhualing.com</p>
+	</div>
+	<div class="bqxx">
+		青岛华凌科技有限公司 qdhualing.com <a href="http://www.beian.miit.gov.cn" style="color:#999;">鲁ICP备19062226号-3</a>
+	</div>
+</div>
+<!--w_grid-1568271949559_end-->
+</body>
+</html>

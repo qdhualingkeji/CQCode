@@ -1,0 +1,382 @@
+<!doctype html>
+<html>
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="辰麒二维码,二维码防伪,二维码溯源,二维码营销,二维码生成,二维码追溯,防伪系统,追溯平台,溯源系统,巡检系统,一码追溯">
+  <meta name="Description" content="一码追溯,免费二维码生成,提供二维码防伪溯源_设备巡检_记录管理_防窜货_一物一码标签印刷_网站营销一站式解决方案,致力于帮助企业快速提高品牌形象与管理效率。">
+<link rel="stylesheet" type="text/css" href="qrcode/cs/style.css" />
+<script type="text/javascript" src="qrcode/js/jquery-3.1.1.min.js"></script>
+<script type="text/javascript">
+$(function(){
+	$(".moduleList_div #item_div").mouseover(function(){
+		$(this).find(".overlay_div").css("display","block");
+	});
+	$(".moduleList_div #item_div").mouseout(function(){
+		$(this).find(".overlay_div").css("display","none");
+	});
+});
+</script>
+<style>
+header .nav .logo {
+    display: block;
+    width: 560px;
+    height: 58px;
+    margin-left: 20px;
+    background: url(qrcode/ig/logo.png) no-repeat center;
+    background-size: 100% 100%;
+}
+.center_div{
+	width: 100%;
+	margin-top:65px;
+	background-color: #F9F9F9;
+}
+.selectModule_div{
+	width:1000px;
+	height:1090px;
+	margin:0 auto;
+}
+.active_new_code_title{
+	width:100%;
+	height: 32px;
+	line-height: 32px;
+	font-size: 32px;
+	text-align:center;
+	padding:64px 0 0;
+	color:#333;
+}
+.moduleList_div{
+	width:100%;
+	height:600px;
+	margin-top: 48px;
+}
+.moduleList_div .item_div{
+	width:160px;
+	height:260px;
+}
+.moduleList_div .item_div .content_div{
+	width:160px;
+	height:220px;
+	background-repeat:no-repeat;
+	background-color:#fff; 
+	background-size:100% 100%;
+	-moz-background-size:100% 100%;
+	background-size: 106px;
+	background-position: 28px 22px;
+}
+.moduleList_div .item_div .overlay_div{
+	width:160px;
+	height: 220px;
+	margin-top:-220px;
+	font-size: 14px;
+	background-color:rgba(0,0,0,.45);
+	cursor:pointer;
+	display:none;
+}
+.moduleList_div .item_div .preview_div{
+	width:160px;
+	text-align:center;
+	color:#fff;
+	margin-top:80px;
+	position: absolute;
+}
+.moduleList_div .item_div .yycmb_div{
+	width:160px;
+	height:40px;
+	line-height:40px;
+	text-align:center;
+	margin-top:180px;
+	color:#fff;
+	background-color:#4CAF50;
+	position: absolute;
+}
+.moduleList_div .item_div .title_div{
+	width:160px;
+	height:40px;
+	line-height:40px;
+	color:#333;
+	font-size: 14px;
+	font-weight:bold;
+	text-align: center;
+}
+.moduleList_div .item_div .create_div{
+	width:160px;height:220px;line-height:220px;text-align: center;color:#666;font-size: 14px;background-color:#fff;box-shadow: 0 2px 5pxrgba(0,0,0,.05);
+}
+.hjItem_div{
+	margin-top:-260px;margin-left:210px;
+}
+.hjContent_div{
+	background-image: url('rsrc/scene/693ac3a37d1123f6ea582f81aa2e01f91540273623.png');
+}
+.bjItem_div{
+	margin-top:-260px;margin-left:420px;
+}
+.bjContent_div{
+	background-image: url('rsrc/scene/c5f3b260c6e47ab14d49c66b9275ed3b1549864235.png');
+}
+.jfItem_div{
+	margin-top:-260px;margin-left:630px;
+}
+.jfContent_div{
+	background-image: url('rsrc/scene/202004260001.png');
+}
+.yspItem_div{
+	margin-top:-260px;margin-left:840px;
+}
+.yspContent_div{
+	background-image: url('rsrc/scene/202004260003.png');
+}
+.smsItem_div{
+	margin-top:-260px;margin-left:210px;
+}
+.smsContent_div{
+	background-image: url('rsrc/scene/202004260002.png');
+}
+.dmtzlItem_div{
+	margin-top:-260px;margin-left:420px;
+}
+.dmtzlContent_div{
+	background-image: url('rsrc/scene/d3d9f95ac203e909f193110cbf0125371579163477.png');
+}
+.jzsgItem_div{
+	margin-top:-260px;margin-left:630px;
+}
+.jzsgContent_div{
+	background-image: url('rsrc/scene/bd4568ac2e4ed86d7be11c46b1ae6d191554261953.png');
+}
+.jfdhjpItem_div{
+	margin-top:-260px;margin-left:840px;
+}
+.jfdhjpContent_div{
+	background-image: url('rsrc/scene/202004270001.png');
+}
+</style>
+<title>辰麒二维码追溯系统，一物一码，智能追溯</title>
+<script type="text/javascript" src="qrcode/js/jquery-3.1.1.min.js"></script>
+<script type="text/javascript">
+$(function(){
+  var nav=$("header");
+  var win=$(window);
+  var sc=$(document);
+  win.scroll(function(){
+    if(sc.scrollTop()>=50){
+      nav.addClass("fix");
+    }else{
+    nav.removeClass("fix");
+    }
+  });
+});
+
+function goAddModule(type){
+	var url;
+	switch(type){
+		case "redWine":
+			url="http://www.qrcodesy.com:8080/GoodsPublic/merchant/main/goAddModule?trade=spzs&moduleType=redWine&from=cq";
+		break;
+		case "whiteWine":
+			url="http://www.qrcodesy.com:8080/GoodsPublic/merchant/main/goAddModule?trade=spzs&moduleType=whiteWine&from=cq";
+		break;
+		case "homeTextiles":
+			url="http://www.qrcodesy.com:8080/GoodsPublic/merchant/main/goAddModule?trade=spzs&moduleType=homeTextiles&from=cq";
+		break;
+		case "artwork":
+			url="http://www.qrcodesy.com:8080/GoodsPublic/merchant/main/goAddModule?trade=spzs&moduleType=artwork&from=cq";
+		break;
+		case "productExplain":
+			url="http://www.qrcodesy.com:8080/GoodsPublic/merchant/main/goAddModule?trade=spzs&moduleType=productExplain&from=cq";
+		break;
+		case "dmtzl":
+			url="http://www.qrcodesy.com:8080/GoodsPublic/merchant/main/goAddModule?trade=dmtzl&from=cq";
+		break;
+		case "jzsg":
+			url="http://www.qrcodesy.com:8080/GoodsPublic/merchant/main/goAddModule?trade=jzsg&from=cq";
+		break;
+		case "jfdhjp":
+			url="http://www.qrcodesy.com:8080/GoodsPublic/merchant/login?from=jfdhjp";
+		break;
+	}
+	location.href=url;
+}
+
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?2d58e7ee2c6bd4eb74b0893c5a3a92a4";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+ </head>
+ <body>
+<header>
+<div class="nav" style="box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.05);">
+    <a href="/" class="logo fl">&nbsp;</a>
+    <div class="navbar">
+        <ul class="menu" style="color:#000;">
+            <li>
+				<a class="a2" href="index.html">首页</a>
+			</li>
+            <li class="active">
+				<a class="a2" href="solutionCommodity.html">案例模板</a>
+			</li>
+			<li>
+				<a class="a2" href="qrcodeCreate/text.html">二维码生成器</a>
+			</li>
+            <li class="list">
+				<a class="a2" href="price.html">定制价格</a>
+            </li>
+			<li class="list">
+				<a class="a2" href="/help/faq/information/">帮助</a>
+			</li>
+        </ul>
+		<div class="nav_button">
+			<a href="http://www.qrcodesy.com:8080/GoodsPublic/merchant/login" target="_blank" class="login2 but">登录</a>
+			<a class="kf-open registered but"><span>申请试用</span></a>
+		</div>
+    </div>
+</div>
+</header>
+<nav class="topnav">
+    <div class="topnav-layer">
+        <div class="topnav-menu">
+            <div class="topnav-menu-col" id="topnavToggle">
+                <div class="topnav-rotate-top"><span></span></div>
+                <div class="topnav-rotate-middle"><span></span></div>
+                <div class="topnav-rotate-bottom"><span></span></div>
+            </div>
+        </div>
+        <div class="topnav-logo"><a href="/"></a></div>
+        <div class="topnav-reg"><a href="http://www.qrcodesy.com:8080/GoodsPublic/merchant/login">登录</a></div>
+    </div>
+    <div class="menu-list">
+        <ul>
+            <li><a href="/">首页</a></li>
+            <li><a href="/qrcode/function">功能</a></li>
+            <li>
+                <a href="/qrcode/solution">解决方案</a>
+                <p><a href="/qrcode/solution">一站式</a></p>
+                <p><a href="/qrcode/solution/traceback.html">防伪追溯</a></p>
+                <p><a href="/qrcode/solution/inspect.html">设备巡检</a></p>
+                <p><a href="/qrcode/solution/record.html">周期记录</a></p>
+            </li>
+            <li>
+				<a href="/qrcode/case">案例展示</a>
+				<p><a href="https://qrcode.pro/q/?c=16666661150000000129000008000004">农药追溯</a></p>
+				<p><a href="https://qrcode.pro/q/?c=00000128000009000000">种子追溯</a></p>
+				<p><a href="https://qrcode.pro/q/?c=00000003000041000000">化肥追溯</a></p>
+				<p><a href="/qrcode/case">更多案例</a></p>
+			</li>
+            <li>
+				<a href="/help/faq/information/">资讯帮助</a>
+				<p><a href="/help/faq/problem/">常识问答</a></p>
+				<p><a href="/help/faq/information/">行业资讯</a></p>
+				<p><a href="/help/faq/help/">帮助文档</a></p>
+				<p><a href="/qrcode/about/">关于我们</a></p>
+			</li>
+			<li><a href="/tools/qrcode/">二维码生成器</a></li>
+        </ul>
+    </div>
+</nav>
+
+<div class="center_div">
+	<div class="selectModule_div">
+		<div class="active_new_code_title">选择模板，开始创建二维码</div>
+
+		<div style="width:775px;height:3px;margin: 0 auto;margin-top: 62px;background-color:rgba(120,130,140,.13)"></div>
+
+		<div class="moduleList_div">
+			<a>
+				<div class="item_div">
+					<div class="create_div" onclick="alert('模板待添加')">从空白新建</div>
+				</div>
+			</a>
+			<div class="item_div hjItem_div" id="item_div">
+				<div class="content_div hjContent_div">
+					
+				</div>
+				<div class="overlay_div">
+					<div class="preview_div">预览</div>
+					<div class="yycmb_div" onclick="goAddModule('redWine')">应用此模板</div>
+				</div>
+				<div class="title_div">红酒</div>
+			</div>
+			<div class="item_div bjItem_div" id="item_div">
+				<div class="content_div bjContent_div">
+					
+				</div>
+				<div class="overlay_div">
+					<div class="preview_div">预览</div>
+					<div class="yycmb_div" onclick="goAddModule('whiteWine')">应用此模板</div>
+				</div>
+				<div class="title_div">白酒</div>
+			</div>
+			<div class="item_div jfItem_div" id="item_div">
+				<div class="content_div jfContent_div">
+					
+				</div>
+				<div class="overlay_div">
+					<div class="preview_div">预览</div>
+					<div class="yycmb_div" onclick="goAddModule('homeTextiles')">应用此模板</div>
+				</div>
+				<div class="title_div">家纺</div>
+			</div>
+			<div class="item_div yspItem_div" id="item_div">
+				<div class="content_div yspContent_div">
+					
+				</div>
+				<div class="overlay_div">
+					<div class="preview_div">预览</div>
+					<div class="yycmb_div" onclick="goAddModule('artwork')">应用此模板</div>
+				</div>
+				<div class="title_div">艺术品</div>
+			</div>
+			<a>
+				<div class="item_div"></div>
+			</a>
+			<div class="item_div smsItem_div" id="item_div">
+				<div class="content_div smsContent_div">
+					
+				</div>
+				<div class="overlay_div">
+					<div class="preview_div">预览</div>
+					<div class="yycmb_div" onclick="goAddModule('productExplain')">应用此模板</div>
+				</div>
+				<div class="title_div">说明书</div>
+			</div>
+			<div class="item_div dmtzlItem_div" id="item_div">
+				<div class="content_div dmtzlContent_div">
+					
+				</div>
+				<div class="overlay_div">
+					<div class="preview_div">预览</div>
+					<div class="yycmb_div" onclick="goAddModule('dmtzl')">应用此模板</div>
+				</div>
+				<div class="title_div">多媒体资料</div>
+			</div>
+			<div class="item_div jzsgItem_div" id="item_div">
+				<div class="content_div jzsgContent_div">
+					
+				</div>
+				<div class="overlay_div">
+					<div class="preview_div">预览</div>
+					<div class="yycmb_div" onclick="goAddModule('jzsg')">应用此模板</div>
+				</div>
+				<div class="title_div">建筑施工</div>
+			</div>
+			<div class="item_div jfdhjpItem_div" id="item_div">
+				<div class="content_div jfdhjpContent_div">
+					
+				</div>
+				<div class="overlay_div">
+					<div class="preview_div">预览</div>
+					<div class="yycmb_div" onclick="goAddModule('jfdhjp')">应用此模板</div>
+				</div>
+				<div class="title_div">积分兑换奖品</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+ </body>
+</html>
