@@ -294,7 +294,7 @@ function initContentDiv(navFlag){
 		contentStr+="</div>";
 		contentStr+="<div style=\"height:30px;line-height:30px;\">箭头所指红框里的即为批量生成的二维码，点击详情即可查看</div>";
 		contentStr+="<div style=\"margin-top:20px;margin-bottom: 20px;\">";
-		contentStr+="<img src=\"qlqrcode_files/images/202004230045.png\" style=\"width:800px;height:521px;\"/>";
+		contentStr+="<img src=\"qlqrcode_files/images/202004230045.png\" style=\"width:800px;height:554px;\"/>";
 		contentStr+="</div>";
 		contentStr+="<div style=\"height:30px;line-height:30px;margin-bottom: 20px;\">生码成功，扫码查看信息，若生成二维码后内容需要修改，点击编辑内容即可修改，修改后的二维码不需要重新生成，扫码显示内容为最新内容。</div>";
 	}
