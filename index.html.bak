@@ -29,6 +29,18 @@
 </script>
 <script type="text/javascript">
 $(function(){
+	var system ={};  
+	var p = navigator.platform;       
+	system.win = p.indexOf("Win") == 0;  
+	system.mac = p.indexOf("Mac") == 0;  
+	system.x11 = (p == "X11") || (p.indexOf("Linux") == 0);     
+	if(system.win||system.mac||system.xll){//如果是电脑跳转到
+	   
+	}
+	else{//如果是手机,跳转到
+	   $(".big_size").css("margin-top","70px");
+	}
+
   var gkspbw=$("#gkspBg_div").css("width");
   gkspbw=gkspbw.substring(0,gkspbw.length-2);
   var gkspw=$("#gksp_div").css("width");
@@ -890,7 +902,7 @@ var swiper = new Swiper('.merchants', {
 	<div class="info-tell">
 		<p>咨询热线：0532-55588351&nbsp;&nbsp;15712773653（微信同号）</p>
 		<p>邮箱地址：qdhualing@126.com</p>
-		<p>公司地址：</p>
+		<p>公司地址：青岛市市北中央商务区西王大厦16F</p>
 	</div>
 	<div class="bqxx">
 		青岛华凌科技有限公司 qdhualing.com <a href="http://www.beian.miit.gov.cn" style="color:#999;">鲁ICP备19062226号-3</a>
