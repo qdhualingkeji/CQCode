@@ -262,10 +262,13 @@ $(function(){
 
 var _hmt = _hmt || [];
 (function() {
-  var hm = document.createElement("script");
-  hm.src = "https://hm.baidu.com/hm.js?8c80a9e9c16ebc0f53192a4a9c150e97";
-  var s = document.getElementsByTagName("script")[0]; 
-  s.parentNode.insertBefore(hm, s);
+	var hm = document.createElement('script');
+	if(location.href.indexOf("www.qrcodesy.com")!=-1)
+		hm.src = '//hm.baidu.com/hm.js?2d58e7ee2c6bd4eb74b0893c5a3a92a4';
+	else
+		hm.src = '//hm.baidu.com/hm.js?8c80a9e9c16ebc0f53192a4a9c150e97';
+	var s = document.getElementsByTagName('script')[0];
+	s.parentNode.insertBefore(hm, s);
 })();
 </script>
  </head>
@@ -279,7 +282,7 @@ var _hmt = _hmt || [];
 				<a class="a2" href="index.html">首页</a>
 			</li>
             <li class="active">
-				<a class="a2" href="solutionCommodity.html">案例模板</a>
+				<a class="a2" href="solutionCommodity.html">案例模版</a>
 			</li>
 			<li>
 				<a class="a2" href="qrcodeCreate/text.html">二维码生成器</a>
@@ -345,7 +348,7 @@ var _hmt = _hmt || [];
 <div style="width:100%;height:218px;padding: 105px 0 0;">
 	<div style="width:1000px;height:204px;text-align: center;margin:0 auto;">
 		<h1 style="font-size: 30px;line-height: 30px;font-weight: 700;">
-			多用户模板化
+			多用户模版化
 			<span style="font-size: 18px;display: block;line-height: 18px;margin-top: 16px;">二维码应用方案</span>
 		</h1>
 		<p style="margin-top: 24px;font-size: 16px;line-height: 20px;">帮助各种规模企业用户在招商、推广、服务等各环节，应用二维码迅速解决信息分享问题</p>
@@ -383,7 +386,7 @@ var _hmt = _hmt || [];
 						</a>
 					</li>
 					<li class="good-scene-item" style="margin-left: 20px;">
-						<a href="detail.html?id=1381" target="_blank" class="good-scene-item-href" statisticanalyze="" sec-data="21">
+						<a href="detail.html?id=1382" target="_blank" class="good-scene-item-href" statisticanalyze="" sec-data="21">
 							<div class="img-box img-pic-two"></div>
 							<div class="goods-info-box">
 								<h3 class="goods-item-title">积分兑换奖品二维码</h3>

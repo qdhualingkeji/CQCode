@@ -13,7 +13,7 @@ function createQrcode(){
 	var content=$("#content_ta").val();
 	$.ajax({
 		url:"http://www.qrcodesy.com:8080/GoodsPublic/merchant/chenQi/createQrcodeByCQSCQ",
-		data:{url:content},
+		data:{text:content,textType:1},
 		dataType:"jsonp",
 		type: "post",
 		jsonpCallback:"jsonpCallback",
@@ -211,7 +211,7 @@ var _hmt = _hmt || [];
 					<a href="../index.html">首页</a>
 				</li>
                 <li>
-					<a href="../solutionCommodity.html">案例模板</a>
+					<a href="../solutionCommodity.html">案例模版</a>
 				</li>
 				<li class="active">
 					<a href="text.html">二维码生成器</a>

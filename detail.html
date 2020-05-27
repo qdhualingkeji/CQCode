@@ -36,14 +36,6 @@ function getQueryString(name){
 	 if(r!=null)return  unescape(r[2]); return null;
 }
 
-var _hmt = _hmt || [];
-(function() {
-  var hm = document.createElement("script");
-  hm.src = "https://hm.baidu.com/hm.js?8c80a9e9c16ebc0f53192a4a9c150e97";
-  var s = document.getElementsByTagName("script")[0]; 
-  s.parentNode.insertBefore(hm, s);
-})();
-
 $(function(){
 	var dcHtml="";
 	var waibHtml="";
@@ -179,7 +171,7 @@ $(function(){
 				waibHtml+="<span style=\"font-size: 16px;\">第一步：编辑二维码内容</span>";
 			waibHtml+="</strong>";
 		waibHtml+="</p>";
-		waibHtml+="<p>在页面右侧选择合适的案例模板，根据自己的需求进行修改并保存，快速生成二维码。</p>";
+		waibHtml+="<p>在页面右侧选择合适的案例模版，根据自己的需求进行修改并保存，快速生成二维码。</p>";
 		/*
 		waibHtml+="<p>";
 			waibHtml+="教程详见：";
@@ -294,6 +286,82 @@ $(function(){
 	
 		var tpl = scrollTpl('qlqrcode_files/images/2019/06/红酒案例图片.jpg', 'qlqrcode_files/images/2019/06/红酒案例图片.png');
 		$("#scene3").append(tpl);
+	}
+	else if(id==1382){
+		dcHtml+="<h1 class=\"detail_title\">";
+			dcHtml+="积分兑换奖品";
+			dcHtml+="<span style=\"position: relative;top: -2px;\">|</span>";
+			dcHtml+="二维码应用教程";
+		dcHtml+="</h1>";
+		dcHtml+="<h2 class=\"detail_desc\">";
+			dcHtml+="<div class=\"text_detail_desc\">";
+				dcHtml+="通过商家后台生成二维码，粘贴在商品包装上，消费者直接扫码即可领取本店积分（自动加入本店会员），达到兑奖上限后即可获得精美礼品或者现金券。通过积分二维码，可以促进顾客重复消费，快速培养忠诚稳定的顾客群。"
+				dcHtml+="<br>作为餐饮平台和电商平台的外挂营销利器，适用于：饿了么，美团外卖以及淘宝京东平台上各行业的电商卖家。";
+			dcHtml+="</div>";
+		dcHtml+="</h2>";
+
+		waibHtml+="<h3 style=\"margin-top: 15px; margin-bottom: 15px; white-space: normal;\">";
+			waibHtml+="<strong>";
+				waibHtml+="<span style=\"font-size: 18px;\">积分二维码的优势</span>";
+			waibHtml+="</strong>";
+		waibHtml+="</h3>";
+		waibHtml+="<ul class=\"list-paddingleft-2\" style=\"list-style-type: disc;\">";
+			waibHtml+="<li>";
+				waibHtml+="<p style=\"white-space: normal;\">取代了实物会员卡，吸收会员更加快捷方便</p>";
+			waibHtml+="</li>";
+			waibHtml+="<li>";
+				waibHtml+="<p style=\"white-space: normal;\">店家自己设置奖品奖项以及积分额度，可以更加灵活地针对不同商品的价值设置不同顾客回报率</p>";
+			waibHtml+="</li>";
+			waibHtml+="<li>";
+				waibHtml+="<p style=\"white-space: normal;\">";
+					waibHtml+="<span style=\"color: #494949; font-size: 14px;\">店家更直观的在后台查看不同顾客的消费数据，维护精准客户，提高店铺的活跃度</span>";
+				waibHtml+="</p>";
+			waibHtml+="</li>";
+			waibHtml+="<li>";
+				waibHtml+="<p style=\"white-space: normal;\">快速从饿了么等餐饮平台，淘宝等电商平台吸粉，提升店铺销售额</p>";
+			waibHtml+="</li>";
+		waibHtml+="</ul>";
+		waibHtml+="<div style=\"margin-top:80px;\">";
+		waibHtml+="<img src=\"qlqrcode_files/attachment/image/20190731/0001.png\" style=\"width:279px;height:557px;\"/>";
+		waibHtml+="<img src=\"qlqrcode_files/attachment/image/20190731/0002.png\" style=\"width:280px;height:559px;margin-left:50px;\"/>";
+		waibHtml+="</div>";
+		waibHtml+="<div style=\"height:30px;line-height:30px;margin-top:50px;\"><span style=\"color: #000000;\"><strong><span style=\"font-size: 18px;\">操作规程</span></strong></span></div>";
+		waibHtml+="<p></p>";
+		waibHtml+="<p>";
+		waibHtml+="<strong>";
+		waibHtml+="<span style=\"font-size: 16px;\">第一步：进入二维码生成页面</span>";
+		waibHtml+="</strong>";
+		waibHtml+="</p>";
+		waibHtml+="<p>点击后台行业模版-积分兑换奖品-二维码生成-添加，来到积分二维码添加页面。</p>";
+		waibHtml+="<p></p>";
+		waibHtml+="<p>";
+		waibHtml+="<strong>";
+		waibHtml+="<span style=\"font-size: 16px;\">第二步：添加积分二维码</span>";
+		waibHtml+="</strong>";
+		waibHtml+="</p>";
+		waibHtml+="<p>上传商家logo、填写二维码中包含的积分，点击提交。返回积分二维码列表，刚才添加的二维码就出现在其中了，包含二维码、所含积分、创建时间等，可对其编辑、导出。</p>";
+		waibHtml+="<p>这个生成的只是该积分下的一个案例码而已，要生成商品码，附在商品包装上，需选择相应的案例码，导出才行。</p>";
+		waibHtml+="<p></p>";
+		waibHtml+="<p>";
+		waibHtml+="<strong>";
+		waibHtml+="<span style=\"font-size: 16px;\">第三步：生成商品码</span>";
+		waibHtml+="</strong>";
+		waibHtml+="</p>";
+		waibHtml+="<p>在积分二维码列表里选择对应的案例码，点击导出，按照提示步骤操作。操作成功，即可生成一定数量的商品码。</p>";
+		waibHtml+="<p></p>";
+		waibHtml+="<p>";
+		waibHtml+="<strong>";
+		waibHtml+="<span style=\"font-size: 16px;\">第四步：微信扫描商品码</span>";
+		waibHtml+="</strong>";
+		waibHtml+="</p>";
+		waibHtml+="<p>打开手机端微信扫一扫，扫相应的商品码可领取一定积分。当积分达到该活动的兑奖积分时，会出现兑奖码、奖品兑换提示，用此兑奖码到商家处兑换奖品。生成兑奖码后会扣除一定账户积分，通过再次扫商品码获取更多积分。每个商品码只能扫一次，重复扫码无效。</p>";
+		
+		ctiuHtml+="<a href=\"http://www.qrcodesy.com:8080/GoodsPublic/merchant/login?from=jfdhjp\"><li class=\"create-tpl-item Margin16\"  is_preview=\"0\" data-type=\"1\" data-long=\"qlqrcode_files/images/rsrc/scene/2b541c82ef7e535cf2f0a2c370dfa36c1547083765.png\">";
+			ctiuHtml+="<h4 class=\"item-name\">";
+				ctiuHtml+="模版试用";
+				ctiuHtml+="<i class=\"fa fa-angle-right\"></i>";
+			ctiuHtml+="</h4>";
+		ctiuHtml+="</li></a>";
 	}
 	else if(id==1380){
 		dcHtml+="<h1 class=\"detail_title\">";
@@ -740,7 +808,7 @@ $(function(){
 				waibHtml+="<strong>第二步：批量创建样品二维码</strong>";
 			waibHtml+="</span>";
 		waibHtml+="</p>";
-		waibHtml+="<p>通常你需要制作大量样品标签二维码，可以将做好的单个二维码转换成批量模板。</p>";
+		waibHtml+="<p>通常你需要制作大量样品标签二维码，可以将做好的单个二维码转换成批量模版。</p>";
 		waibHtml+="<p>然后将样品信息整理成excel表格，一次性导入就可快速完成批量二维码的制作，提升制作效率。</p>";
 		/*
 		waibHtml+="<p style=\"margin-bottom: 15px;\">";
@@ -947,7 +1015,7 @@ $(function(){
 				<a class="a2" href="index.html">首页</a>
 			</li>
             <li class="active">
-				<a class="a2" href="solutionCommodity.html">案例模板</a>
+				<a class="a2" href="solutionCommodity.html">案例模版</a>
 			</li>
 			<li>
 				<a class="a2" href="qrcodeCreate/text.html">二维码生成器</a>
@@ -1044,15 +1112,17 @@ var sceneId = '1381';
 var sceneTitle = '商品标签';
 var SOCKETAPISURL = 'https://socket.api.cli.im';
 </script>
-<div class="wrapper p-b-lg" style='background-color: #ffffff;'>
+<div class="wrapper p-b-lg" style='margin-top: 40px;background-color: #ffffff;'>
 	<div class="mobile-logo-show mobile-to-pc">
 	   电脑网页登陆辰麒官网cli.im，注册账号即可制作二维码。
 	   <span mobile-pc-close class="mobile-pc-close">×</span>
 	</div>
 	<div class="case-detail-content">
+	   <!--
 	   <div class="mobile-logo mobile-logo-show">
 		 <a href="//cli.im" class="logo"></a>
 	   </div>
+	   -->
 	</div>
 	<div class="case-detail-box">
 		<div class="case-detail-box-auto">
@@ -1643,7 +1713,7 @@ var SOCKETAPISURL = 'https://socket.api.cli.im';
 <div class="create-code-tpl-box leftClass" id="leftBox">
 	<div class="quick-create-tpl">
 		<div class="create-item-box">
-			<h3 class="quick-create-tpl-name">使用案例模板，快速新建</h3>
+			<h3 class="quick-create-tpl-name">使用案例模版，快速新建</h3>
 			<ul class="create-tpl-item-ul" id="create-tpl-item-ul">
 				
 				
@@ -1823,7 +1893,7 @@ var SOCKETAPISURL = 'https://socket.api.cli.im';
 <script type="text/javascript" src="qlqrcode_files/static/js/create_code_plugins_c2cca83.js"></script>
 <script src="qlqrcode_files/static/js/active_scene_detail_bb05f76.js"></script>
 <div class="scene_footer">
-	<p>?2011-2019 Cli.im 宁波邻家网络科技有限公司<br>浙ICP备12002384号-4</p>
+	<p>青岛华凌科技有限公司 qdhualing.com<br>鲁ICP备19062226号-3</p>
 </div>
 
 	  <div class="b-t-light scene_tip">
@@ -1852,8 +1922,11 @@ var SOCKETAPISURL = 'https://socket.api.cli.im';
       var _hmt = _hmt || [];
       (function() {
         var hm = document.createElement('script');
-                    hm.src = '//hm.baidu.com/hm.js?cb508e5fef81367bfa47f4ec313bf68c';        
-					var s = document.getElementsByTagName('script')[0];
+		if(location.href.indexOf("www.qrcodesy.com")!=-1)
+            hm.src = '//hm.baidu.com/hm.js?2d58e7ee2c6bd4eb74b0893c5a3a92a4';
+		else
+            hm.src = '//hm.baidu.com/hm.js?8c80a9e9c16ebc0f53192a4a9c150e97';
+		var s = document.getElementsByTagName('script')[0];
         s.parentNode.insertBefore(hm, s);
         var getCookie = function (name) {
           var arr = document.cookie.match(new RegExp('(^| )' + name + '=([^;]*)(;|$)'));

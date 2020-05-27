@@ -29,18 +29,6 @@
 </script>
 <script type="text/javascript">
 $(function(){
-	var system ={};  
-	var p = navigator.platform;       
-	system.win = p.indexOf("Win") == 0;  
-	system.mac = p.indexOf("Mac") == 0;  
-	system.x11 = (p == "X11") || (p.indexOf("Linux") == 0);     
-	if(system.win||system.mac||system.xll){//如果是电脑跳转到
-	   
-	}
-	else{//如果是手机,跳转到
-	   $(".big_size").css("margin-top","70px");
-	}
-
   var gkspbw=$("#gkspBg_div").css("width");
   gkspbw=gkspbw.substring(0,gkspbw.length-2);
   var gkspw=$("#gksp_div").css("width");
@@ -495,7 +483,7 @@ ul, li, h1, h2, h3, h4, h5, h6, dl, dt, dd, form, input, hr, img, div, label, sp
 				<a href="index.html">首页</a>
 			</li>
             <li>
-				<a href="solutionCommodity.html">案例模板</a>
+				<a href="solutionCommodity.html">案例模版</a>
 			</li>
 			<li>
 				<a href="qrcodeCreate/text.html">二维码生成器</a>
@@ -648,7 +636,7 @@ var swiper = new Swiper('.merchants', {
 					</li>
 					<li class="system-tab-content-li">
 						<h4>行业模版</h4>
-						<p>常见行业模板免费套用，只需3步即可生成属于自己的二维码</p>
+						<p>常见行业模版免费套用，只需3步即可生成属于自己的二维码</p>
 					</li>
 				</ul>
 			</div>
@@ -663,8 +651,8 @@ var swiper = new Swiper('.merchants', {
 			</div>
 		</div>
 		<div class="action-box2">
-			<div class="symbcj_div" onclick="location.href='newcode.html'">使用模板创建</div>
-			<div class="zdycj_div" onclick="alert('这个模板有待添加')">自定义创建</div>
+			<div class="symbcj_div" onclick="location.href='newcode.html'">使用模版创建</div>
+			<div class="zdycj_div" onclick="alert('这个模版有待添加')">自定义创建</div>
 		</div>
 	</div>
 </section>
