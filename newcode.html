@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="Generator" content="EditPlus®">
   <meta name="Author" content="">
-  <meta name="Keywords" content="辰麒二维码,二维码防伪,二维码溯源,二维码营销,二维码生成,二维码追溯,防伪系统,追溯平台,溯源系统,巡检系统,一码追溯">
+  <meta name="keywords" content="辰麒网,二维码,二维码图片,二维码制作,二维码名片,qrcode,二维码是什么,辰麒二维码,二维码防伪,二维码溯源,二维码营销,二维码生成,二维码追溯,二维码论坛,二维条码,微信二维码,二维码防伪系统,二维码追溯平台,二维码溯源系统,二维码巡检系统,二维码一码追溯" />
   <meta name="Description" content="一码追溯,免费二维码生成,提供二维码防伪溯源_设备巡检_记录管理_防窜货_一物一码标签印刷_网站营销一站式解决方案,致力于帮助企业快速提高品牌形象与管理效率。">
 <link rel="stylesheet" type="text/css" href="qrcode/cs/style.css" />
 <script type="text/javascript" src="qrcode/js/jquery-3.1.1.min.js"></script>
@@ -107,55 +107,64 @@ header .nav .logo {
 	margin-top:-260px;margin-left:210px;
 }
 .hjContent_div{
-	background-image: url('rsrc/scene/693ac3a37d1123f6ea582f81aa2e01f91540273623.png');
+	background-image: url('qlqrcode_files/images/rsrc/scene/693ac3a37d1123f6ea582f81aa2e01f91540273623.png');
 }
 .bjItem_div{
 	margin-top:-260px;margin-left:420px;
 }
 .bjContent_div{
-	background-image: url('rsrc/scene/c5f3b260c6e47ab14d49c66b9275ed3b1549864235.png');
-}
-.jfItem_div{
-	margin-top:-260px;margin-left:630px;
-}
-.jfContent_div{
-	background-image: url('rsrc/scene/202004260001.png');
-}
-.yspItem_div{
-	margin-top:-260px;margin-left:840px;
-}
-.yspContent_div{
-	background-image: url('rsrc/scene/202004260003.png');
-}
-.smsItem_div{
-	margin-top:-260px;margin-left:210px;
-}
-.smsContent_div{
-	background-image: url('rsrc/scene/202004260002.png');
-}
-.dmtzlItem_div{
-	margin-top:-260px;margin-left:420px;
-}
-.dmtzlContent_div{
-	background-image: url('rsrc/scene/d3d9f95ac203e909f193110cbf0125371579163477.png');
-}
-.jzsgItem_div{
-	margin-top:-260px;margin-left:630px;
-}
-.jzsgContent_div{
-	background-image: url('rsrc/scene/bd4568ac2e4ed86d7be11c46b1ae6d191554261953.png');
+	background-image: url('qlqrcode_files/images/rsrc/scene/c5f3b260c6e47ab14d49c66b9275ed3b1549864235.png');
 }
 .jfdhjpItem_div{
-	margin-top:-260px;margin-left:840px;
+	margin-top:-260px;margin-left:630px;
 }
 .jfdhjpContent_div{
-	background-image: url('rsrc/scene/202004270001.png');
+	background-image: url('qlqrcode_files/images/rsrc/scene/202006120002.png');
+}
+.smylItem_div{
+	margin-top:-260px;margin-left:840px;
+}
+.smylContent_div{
+	background-image: url('qlqrcode_files/images/rsrc/scene/202006120001.png');
+}
+.jfItem_div{
+	margin-top:0px;margin-left:0px;
+}
+.jfContent_div{
+	background-image: url('qlqrcode_files/images/rsrc/scene/202004260001.png');
+}
+.yspItem_div{
+	margin-top:-260px;margin-left:210px;
+}
+.yspContent_div{
+	background-image: url('qlqrcode_files/images/rsrc/scene/202004260003.png');
+}
+.smsItem_div{
+	margin-top:-260px;margin-left:420px;
+}
+.smsContent_div{
+	background-image: url('qlqrcode_files/images/rsrc/scene/202004260002.png');
+}
+.dmtzlItem_div{
+	margin-top:-260px;margin-left:630px;
+}
+.dmtzlContent_div{
+	background-image: url('qlqrcode_files/images/rsrc/scene/d3d9f95ac203e909f193110cbf0125371579163477.png');
+}
+.jzsgItem_div{
+	margin-top:-260px;margin-left:840px;
+}
+.jzsgContent_div{
+	background-image: url('qlqrcode_files/images/rsrc/scene/bd4568ac2e4ed86d7be11c46b1ae6d191554261953.png');
 }
 </style>
 <title>辰麒二维码追溯系统，一物一码，智能追溯</title>
 <script type="text/javascript" src="qrcode/js/jquery-3.1.1.min.js"></script>
 <script type="text/javascript">
 $(function(){
+  checkBgIfLogin();
+  setInterval("checkBgIfLogin()","3000");
+
   var nav=$("header");
   var win=$(window);
   var sc=$(document);
@@ -167,6 +176,54 @@ $(function(){
     }
   });
 });
+
+function checkBgIfLogin(){
+	$.ajax({
+		url:"http://www.qrcodesy.com:8080/GoodsPublic/merchant/chenQi/checkBgIfLogin",
+		dataType:"jsonp",
+		type: "post",
+		jsonpCallback:"jsonpCallback",
+		success:function(result){
+			var data=JSON.parse(result);
+			var ifLogin=data.ifLogin;
+			if(ifLogin=="ok"){
+				$("#loginBut_a").css("display","none");
+				$("#htglBut_a").css("display","block");
+
+				$("#userName").val(data.userName);
+				$("#password").val(data.passWord);
+			}
+			else{
+				$("#loginBut_a").css("display","block");
+				$("#htglBut_a").css("display","none");
+				
+				$("#userName").val("");
+				$("#password").val("");
+			}
+		}
+	});
+}
+
+function autoLogin(){
+	var userName=$("#userName").val();
+	var password=$("#password").val();
+	$.ajax({
+		url:"http://www.qrcodesy.com:8080/GoodsPublic/merchant/chenQi/autoLogin",
+		data:{userName:userName,password:password},
+		dataType:"jsonp",
+		type: "post",
+		jsonpCallback:"jsonpCallback",
+		success:function(result){
+			var data=JSON.parse(result);
+			if(data.status==0){
+				location.href="http://www.qrcodesy.com:8080/GoodsPublic"+data.url;
+			}
+			else{
+				alert(data.msg);
+			}
+		}
+	});
+}
 
 function goAddModule(type){
 	var url;
@@ -191,6 +248,9 @@ function goAddModule(type){
 		break;
 		case "jzsg":
 			url="http://www.qrcodesy.com:8080/GoodsPublic/merchant/main/goAddModule?trade=jzsg&from=cq";
+		break;
+		case "smyl":
+			url="http://www.qrcodesy.com:8080/GoodsPublic/merchant/main/goAddModule?trade=smyl&from=cq";
 		break;
 		case "jfdhjp":
 			url="http://www.qrcodesy.com:8080/GoodsPublic/merchant/login?from=jfdhjp";
@@ -234,7 +294,12 @@ var _hmt = _hmt || [];
 			</li>
         </ul>
 		<div class="nav_button">
-			<a href="http://www.qrcodesy.com:8080/GoodsPublic/merchant/login" target="_blank" class="login2 but">登录</a>
+			<input type="hidden" id="userName"/>
+			<input type="hidden" id="password"/>
+			<a href="http://www.qrcodesy.com:8080/GoodsPublic/merchant/login" target="_blank" class="login2 but" id="loginBut_a">登录</a>
+			<a class="htgl2 but" id="htglBut_a" onclick="autoLogin()">后台管理</a>
+		</div>
+		<div class="nav_button">
 			<a class="kf-open registered but"><span>申请试用</span></a>
 		</div>
     </div>
@@ -314,6 +379,26 @@ var _hmt = _hmt || [];
 				</div>
 				<div class="title_div">白酒</div>
 			</div>
+			<div class="item_div jfdhjpItem_div" id="item_div">
+				<div class="content_div jfdhjpContent_div">
+					
+				</div>
+				<div class="overlay_div">
+					<div class="preview_div">预览</div>
+					<div class="yycmb_div" onclick="goAddModule('jfdhjp')">应用此模版</div>
+				</div>
+				<div class="title_div">积分兑换奖品</div>
+			</div>
+			<div class="item_div smylItem_div" id="item_div">
+				<div class="content_div smylContent_div">
+					
+				</div>
+				<div class="overlay_div">
+					<div class="preview_div">预览</div>
+					<div class="yycmb_div" onclick="goAddModule('smyl')">应用此模版</div>
+				</div>
+				<div class="title_div">树木园林</div>
+			</div>
 			<div class="item_div jfItem_div" id="item_div">
 				<div class="content_div jfContent_div">
 					
@@ -334,9 +419,6 @@ var _hmt = _hmt || [];
 				</div>
 				<div class="title_div">艺术品</div>
 			</div>
-			<a>
-				<div class="item_div"></div>
-			</a>
 			<div class="item_div smsItem_div" id="item_div">
 				<div class="content_div smsContent_div">
 					
@@ -366,16 +448,6 @@ var _hmt = _hmt || [];
 					<div class="yycmb_div" onclick="goAddModule('jzsg')">应用此模版</div>
 				</div>
 				<div class="title_div">建筑施工</div>
-			</div>
-			<div class="item_div jfdhjpItem_div" id="item_div">
-				<div class="content_div jfdhjpContent_div">
-					
-				</div>
-				<div class="overlay_div">
-					<div class="preview_div">预览</div>
-					<div class="yycmb_div" onclick="goAddModule('jfdhjp')">应用此模版</div>
-				</div>
-				<div class="title_div">积分兑换奖品</div>
 			</div>
 		</div>
 	</div>
